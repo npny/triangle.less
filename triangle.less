@@ -1,0 +1,70 @@
+/*
+ *  triangle.less
+ *  https://github.com/theinternetismadeofcats/triangle.less
+ *  
+ *  Usage :
+ *    .triangle( @direction, @width, @height, @color )
+ *  
+ *  @direction: [N, NE, E, SE, S, SW, W, NW, up, up-right, right, down-right, down, down-left, left, up-left]
+ * 
+ *  Released under the MIT license
+ *  Copyright 2013,  Pierre Boyer
+ */
+
+.triangle(@direction, @width, @height, @color)
+{
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = N), (@direction = up)
+{
+
+    border-width: 0 @width/2 @height @width/2;
+    border-color: transparent transparent @color transparent;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = NE), (@direction = up-right)
+{
+    border-width: 0 @width @height 0;
+    border-color: transparent @color transparent transparent;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = E), (@direction = right)
+{
+    border-width: @height/2 0 @height/2 @width;
+    border-color: transparent transparent transparent @color;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = SE), (@direction = down-right)
+{
+    border-width: 0 0 @height @width;
+    border-color: transparent transparent @color transparent;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = S), (@direction = down)
+{
+    border-width: @height @width/2 0 @width/2;
+    border-color: @color transparent transparent transparent;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = SW), (@direction = down-left)
+{
+    border-width: @height 0 0 @width;
+    border-color: transparent transparent transparent @color;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = W), (@direction = left)
+{
+    border-width: @height/2 @width @height/2 0;
+    border-color: transparent @color transparent transparent;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = NW), (@direction = up-left)
+{
+    border-width: @height @width 0 0;
+    border-color: @color transparent transparent transparent;
+}
