@@ -1,4 +1,4 @@
-[triangle.less](https://github.com/theinternetismadeofcats/triangle.less)
+[triangle.less](https://github.com/npny/triangle.less)
 =============
 Create simple triangular shapes in LESS.
 
@@ -49,4 +49,4 @@ License
 
 triangle.less is released under the [MIT license](http://opensource.org/licenses/mit-license.php).
 
-(c) Pierre Boyer 2013
+Pierre Boyer, 2013
